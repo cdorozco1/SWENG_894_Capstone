@@ -18,7 +18,7 @@ import {GlobalProvider} from './context/GlobalState'
 //import Dashboard from './components/Dashboard/Dashboard';
 //import Preferences from './components/Preferences/Preferences';
 
-function App() {
+function Home() {
   return (
       <GlobalProvider>
       <Header />
@@ -32,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
