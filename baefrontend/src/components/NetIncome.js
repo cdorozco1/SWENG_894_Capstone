@@ -25,11 +25,11 @@ export const NetIncome = () => {
         <div className="net-income-container">
           <div>
             <h4>Income</h4>
-    <p className="money plus">{income}</p>
+    <p className="money plus">${income}</p>
           </div>
           <div>
             <h4>Expense</h4>
-    <p  className="money minus">{expense}</p>
+    <p  className="money minus">${expense}</p>
           </div>
         </div>
     );

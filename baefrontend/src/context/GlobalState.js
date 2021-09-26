@@ -7,10 +7,10 @@ import AppReducer from './AppReducer'
 // Initial state variable
 const initialState = {
     transactions: [
-          { id: 1, type: 'expense', text: 'Flower', amount: -20 },
-          { id: 2, type: 'expense', text: 'Salary', amount: 300 },
-          { id: 3, type: 'expense', text: 'Book', amount: -10 },
-          { id: 4, type: 'expense', text: 'Camera', amount: 150 }
+          { id: 1, income: "Expense", text: 'Milk', transtype:"Groceries", date:"2021-09-15" , amount: -20 },
+          { id: 2, income: "Income",  text: 'Paycheck', transtype:"Income",date:"2021-09-15", amount: 300 },
+          { id: 3, income: "Expense", text: 'Book',   transtype:"School", date:"2021-09-15", amount: -10 },
+          { id: 4, income: "Expense",  text: 'Camera', transtype: "Leisure", date:"2021-09-15", amount: 150 }
         ] 
 }
 
