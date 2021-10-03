@@ -68,11 +68,11 @@ h4 {
   margin: 5px 0;
 }
 
-.money.plus {
+.money.in {
   color: #2ecc71;
 }
 
-.money.minus {
+.money.out {
   color: #c0392b;
 }
 

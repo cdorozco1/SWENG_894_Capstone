@@ -1,3 +1,6 @@
+// Prepared by: David Orozco
+// The following is the source code for the Budgeting and Expense App, or BAE
+// This file provides the source code calculating the balance in BAE
 import React, {useState} from 'react'
 
 function LoginForm({Login, error}) {

@@ -3,14 +3,15 @@
 // This project is a work in progress
 
 // Imports
-import React, { useState } from 'react'
+//import React, { useState } from 'react'
 import Home from './Home'
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
-import LoginForm from './components/Login/LoginForm';
+//import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+//import LoginForm from './components/Login/LoginForm';
 
 
 function App() {
 
+  /*
   // Define login email and pw. Temp
   const adminUser = {
     email: "admin@google.com",
@@ -32,7 +33,7 @@ function App() {
     } else{
       console.log("Invalid login");
       setError("Invalid Login");
-    }
+    } 
 
   }
 
@@ -40,9 +41,7 @@ function App() {
     console.log("Logout;")
     setUser({name:"",email:""})
   }
-
-
-
+*/
   return (
        /*<Router>
         <div className="App">

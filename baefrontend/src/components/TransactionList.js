@@ -9,7 +9,6 @@ import { GlobalContext } from '../context/GlobalState';
 
 export const TransactionList = () => {
     const {transactions} = useContext(GlobalContext);
-    console.log(GlobalContext);
     return (
         <>
             <h3>Transaction List</h3>
