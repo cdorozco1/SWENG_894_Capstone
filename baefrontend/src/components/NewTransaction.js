@@ -23,7 +23,7 @@ export const NewTransaction = () => {
     // Define function for adding new transaction
     const newTransaction = {
         // Generate random number for id
-        id: Math.floor(Math.random()*100000000),
+        id: Math.floor(Math.random()*1000000),
         // Set to income if greater than 0, expense if less than 0
         income: parseInt(amount)>0 ? "Income" : "Expense",
         // Name of transaction
@@ -41,25 +41,27 @@ export const NewTransaction = () => {
 
     return (
         <>
-            <h3>Add New Transaction</h3>
+            <h3 data-testid = "header">
+                Add New Transaction
+            </h3>
             <form onSubmit={onSubmit}>
                 <div className="form-control">
                     <label htmlFor="text">Transaction Title</label>
-                    <input type="text" value={text} onChange={(e)=>setText(e.target.value)} placeholder="Enter description..." />
+                    <input data-testid="text" type="text" value={text} onChange={(e)=>setText(e.target.value)} placeholder="Enter description..." />
                 </div>
                 <div className="form-control">
                     <label htmlFor="amount">Amount <br />(Negative for expense, positive for income)</label>
-                <input type="number" value={amount} onChange={(e)=>setAmount(e.target.value)} placeholder="Enter amount..." />
+                <input data-testid = "amount" type="number" value={amount} onChange={(e)=>setAmount(e.target.value)} placeholder="Enter amount..." />
             </div>
             <div className="form-control">
                     <label htmlFor="transtype">Transaction Type <br />(Enter category of the transaction)</label>
-                <input type="text" value={transtype} onChange={(e)=>setTranstype(e.target.value)} placeholder="Enter type..." />
+                <input data-testid="transtype" type="text" value={transtype} onChange={(e)=>setTranstype(e.target.value)} placeholder="Enter type..." />
             </div>
             <div className="form-control">
                     <label htmlFor="date">Transaction Date <br />(Enter date of the transaction)</label>
-                <input type="date" value={date} onChange={(e)=>setDate(e.target.value)} placeholder="Enter type..." />
+                <input data-testid = "date" type="date" value={date} onChange={(e)=>setDate(e.target.value)} placeholder="Enter date..." />
             </div>
-            <button className="btn">Add Transaction</button>
+            <button data-testid="addTransBtn" className="btn">Add Transaction</button>
             </form>
         </>
     );

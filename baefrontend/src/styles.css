@@ -44,7 +44,7 @@ h4 {
   text-transform: uppercase;
 }
 
-.inc-exp-container {
+.net-income-container {
   background-color: #fff;
   box-shadow: var(--box-shadow);
   padding: 20px;
@@ -53,12 +53,12 @@ h4 {
   margin: 20px 0;
 }
 
-.inc-exp-container > div {
+.net-income-container > div {
   flex: 1;
   text-align: center;
 }
 
-.inc-exp-container > div:first-of-type {
+.net-income-container > div:first-of-type {
   border-right: 1px solid #dedede;
 }
 
