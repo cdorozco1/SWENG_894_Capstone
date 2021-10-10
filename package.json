@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-   "server": "nodemon server"
+    "server": "nodemon server",
+    "baefrontend" : "npm start --prefix baefrontend",
+    "dev": "concurrently \"npm run server\" \"npm run baefrontend\""
   },
   "repository": {
     "type": "git",

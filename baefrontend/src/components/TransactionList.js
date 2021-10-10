@@ -2,13 +2,19 @@
 // The following is the source code for the Budgeting and Expense App, or BAE
 // This file provides the implementation for the transaction list compnent in the BAE app
 
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import { Transaction } from './Transaction';
 import { GlobalContext } from '../context/GlobalState';
 
 
 export const TransactionList = () => {
-    const {transactions} = useContext(GlobalContext);
+    const {transactions, getTransactions} = useContext(GlobalContext);
+
+    useEffect(() =>{
+        getTransactions();
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     return (
         <>
             <h3 data-testid="header">Transaction List</h3>
