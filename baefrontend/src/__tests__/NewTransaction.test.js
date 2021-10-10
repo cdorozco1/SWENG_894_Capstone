@@ -148,5 +148,3 @@ test("User can't enter invalid date, UT-008", () =>{
 //     fireEvent.click(addTransBtn);
 // })
 
-
-

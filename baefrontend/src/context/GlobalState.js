@@ -6,12 +6,7 @@ import AppReducer from './AppReducer'
 
 // Initial state variable
 const initialState = {
-    transactions: [
-          { id: 1, income: "Expense", text: 'Milk', transtype:"Groceries", date:"2021-09-15" , amount: -20.00 },
-          { id: 2, income: "Income",  text: 'Paycheck', transtype:"Income",date:"2021-09-15", amount: 300.05 },
-          { id: 3, income: "Expense", text: 'Book',   transtype:"School", date:"2021-09-15", amount: -10.50 },
-          { id: 4, income: "Expense",  text: 'Camera', transtype: "Leisure", date:"2021-09-15", amount: 150.50 }
-        ] 
+    transactions: [] 
 }
 
 // Create context
