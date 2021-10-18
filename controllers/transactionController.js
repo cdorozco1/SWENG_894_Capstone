@@ -1,3 +1,8 @@
+// Prepared by: David Orozco
+// The following is the source code for the Budgeting and Expense App, or BAE
+// This file provides the source code for the backend transaction controller
+
+// Imports/dependencies
 const Transaction = require('../models/Transaction')
 
 // Desc     Gets all transactions
@@ -25,10 +30,13 @@ exports.getTransactions = async(req, res, next) => {
 // Access   Public
 exports.addTransaction = async(req, res, next) => {
     try{
+        // Define body as the transaction info
         const {income, text, transtype, date, amount} = req.body;
 
+        // Create transaction request body
         const transaction = await Transaction.create(req.body);
-    
+        
+        // Return response
         return res.status(201).json({
             success: true,
             data: transaction
@@ -50,11 +58,12 @@ exports.addTransaction = async(req, res, next) => {
       }
     }
 
-// Desc     Delete all transactions
+// Desc     Delete transaction
 // Route    DELETE /api/v1/transactions/:id
 // Access   Public
 exports.deleteTransaction = async(req, res, next) => {
     try{
+        // If transaction isn't found, return an error
         const transaction = await Transaction.findById(req.params.id);
         if(!transaction){
             return res.status(404).json({
@@ -62,7 +71,7 @@ exports.deleteTransaction = async(req, res, next) => {
                 error: 'No transaction found'
             });
         }
-
+        // Remove transaction
         await transaction.remove();
         return res.status(200).json({
             success: true,

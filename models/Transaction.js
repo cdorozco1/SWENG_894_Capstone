@@ -1,3 +1,7 @@
+// Prepared by: David Orozco
+// The following is the source code for the Budgeting and Expense App, or BAE
+// This file provides the source code for the backend transactions model
+
 const mongoose = require('mongoose');
 
 const TransactionSchema = new mongoose.Schema({

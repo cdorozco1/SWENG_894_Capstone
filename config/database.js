@@ -1,3 +1,8 @@
+// Prepared by: David Orozco
+// The following is the source code for the Budgeting and Expense App, or BAE
+// This file provides the source code for the backend database
+
+
 const mongoose = require('mongoose');
 
 const connectDB = async () => {

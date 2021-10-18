@@ -4,10 +4,13 @@
 
 import React, {useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState';
+import { format } from 'date-fns';
 
 export const Transaction = ({transaction}) => {
     const {deleteTransaction} = useContext(GlobalContext);
-
+    const date = transaction.date;
+    const dateForm= format(new Date(transaction.date), 'yyyy/MM/dd');
+    
     const sign = transaction.amount < 0 ? '-' : '+';
 
     return (
@@ -15,7 +18,7 @@ export const Transaction = ({transaction}) => {
             {transaction.text} 
             <span>{transaction.income}</span>
             <span>{transaction.transtype}</span>
-            <span>{transaction.date}</span>
+            <span>{dateForm}</span>
             <span>{sign}${Math.abs(transaction.amount)}</span>
             <button onClick ={() => deleteTransaction(transaction._id)} className="delete-btn">x</button>
         </li> 
