@@ -7,6 +7,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const colors = require('colors');
 const morgan = require('morgan');
+const cors = require('cors')
 const connectDB = require('./config/database')
 
 // Dotenv path
@@ -31,6 +32,14 @@ const PORT = process.env.port || 5000;
 
 // Listen on the port. Used during development
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold));
+
+app.use(cors());
+
+app.use('/login', (req, res) => {
+  res.send({
+    token: 'test123'
+  });
+});
 
 // Export app. Used during testing
  module.exports = app;

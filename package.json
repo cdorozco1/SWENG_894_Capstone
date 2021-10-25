@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "concurrently": "^6.3.0",
+    "cors": "^2.8.5",
     "nodemon": "^2.0.13",
     "supertest": "^6.1.6"
   }

@@ -1,6 +1,6 @@
 // Prepared by: David Orozco
 // The following is the source code for the Budgeting and Expense App, or BAE
-// This file provides the source code for adding a new transaction
+// This file provides the the source code for the New Transaction component
 
 // Imports
 import React, {useState, useContext} from 'react'

@@ -1,10 +1,11 @@
 // Prepared by: David Orozco
 // The following is the source code for the Budgeting and Expense App, or BAE
-// This file provides the source code for the transaction component in BAE
+// This file provides the source code for the Transaction component
 
 import React, {useContext} from 'react'
-import { GlobalContext } from '../context/GlobalState';
-import { format } from 'date-fns';
+import { GlobalContext } from '../context/GlobalState'
+import { format } from 'date-fns'
+
 
 export const Transaction = ({transaction}) => {
     const {deleteTransaction} = useContext(GlobalContext);

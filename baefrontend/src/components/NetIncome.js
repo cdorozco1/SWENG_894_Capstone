@@ -1,6 +1,6 @@
 // Prepared by: David Orozco
 // The following is the source code for the Budgeting and Expense App, or BAE
-// This file provides the source code for a the net income calculation in BAE
+// This file provides the source code for the Net Income component
 
 import React, {useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState';
