@@ -3,7 +3,8 @@
 // This file provides the source code for the dashboard component
 
 // Imports
-import React from 'react'
+import React from 'react';
+import {removeUserSession} from './utilities/Session';
 
 // BAE GUI components
 import {Header} from './Header';
@@ -13,7 +14,7 @@ import {TransactionList} from './TransactionList'
 import {NewTransaction} from './NewTransaction'
 import {GlobalProvider} from '../context/GlobalState'
 
-export const Dashboard = () => {
+function Dashboard(props){
     return (
         <GlobalProvider>
         <Header />
@@ -26,3 +27,5 @@ export const Dashboard = () => {
         </GlobalProvider>
     );
 }
+
+export default Dashboard;

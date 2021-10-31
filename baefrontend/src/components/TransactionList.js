@@ -2,7 +2,7 @@
 // The following is the source code for the Budgeting and Expense App, or BAE
 // This file provides the source code for the Transaction List Component
 
-import React, {useContext, useEffect} from 'react'
+import React, {useContext, useEffect} from 'react';
 import { Transaction } from './Transaction';
 import { GlobalContext } from '../context/GlobalState';
 

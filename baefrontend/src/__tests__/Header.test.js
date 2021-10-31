@@ -14,5 +14,5 @@ test("Header renders with correct test", () =>{
     const headerElement = component.getByTestId("header");
 
     //Verify the header displays the proper text.
-    expect(headerElement.textContent).toBe("Budgeting And Expense Application");
+    expect(headerElement.textContent).toBe("Budgeting And Expense Application - Dashboard");
 })

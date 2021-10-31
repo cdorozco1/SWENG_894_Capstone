@@ -3,7 +3,7 @@
 // This file provides the the source code for the New Transaction component
 
 // Imports
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
 

@@ -1,9 +1,9 @@
 // Prepared by: David Orozco
 // The following is the source code for the Budgeting and Expense App, or BAE
-// This file provides the source code calculating the balance in BAE
+// This file provides the source code for the balance calculation component in BAE
 
-import React, {useContext} from 'react'
-import { GlobalContext } from '../context/GlobalState'
+import React, {useContext} from 'react';
+import { GlobalContext } from '../context/GlobalState';
 
 export const Balance = () => {
   const {transactions} = useContext(GlobalContext);
