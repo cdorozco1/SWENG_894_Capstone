@@ -2,7 +2,7 @@
 // The following is the source code for the Budgeting and Expense App, or BAE
 // This file provides the source code for the Net Income component
 
-import React, {useContext} from 'react'
+import React, {useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
 export const NetIncome = () => {
