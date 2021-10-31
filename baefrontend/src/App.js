@@ -14,11 +14,11 @@ import Login from './components/Login';
 import './styling/styles.css'
 
 function App() {
-  const [token, setToken] = useState();
+  // const [token, setToken] = useState();
 
-  if(!token) {
-    return <Login setToken={setToken} />
-  };
+  // if(!token) {
+  //   return <Login setToken={setToken} />
+  // };
 
   return (
     <div>
