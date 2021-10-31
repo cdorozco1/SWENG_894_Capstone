@@ -31,7 +31,7 @@ function App() {
     if(!token) {
       return;
     }
-
+    
     axios.get(`http://localhost:5000/verifyToken?token=${token}`).then(response => {
       setUserSession(response.data.token, response.data.user);
       setAuthLoading(false);
