@@ -11,7 +11,7 @@ const connectDB = require('./config/database');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
-const users = require('./Users');
+const users = require('./users/Users');
 
 // Dotenv path
 dotenv.config({path: './config/config.env'});
@@ -20,10 +20,6 @@ dotenv.config({path: './config/config.env'});
 connectDB();
 const transactions = require('./routes/transactions');
 const app = express();
-
-if (process.env.NODE_ENV === 'development'){
-    app.use(morgan('dev'));
-};
 
 app.use(express.json());
 app.use('/api/v1/transactions', transactions);
@@ -134,5 +130,11 @@ app.get('/verifyToken', function (req, res) {
 const PORT = process.env.port || 5000;
 
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold));
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+} else {
+  app.use(morgan('dev'));
+}
 
 module.exports = app;
