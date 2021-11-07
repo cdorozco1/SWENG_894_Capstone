@@ -9,7 +9,7 @@
     "baefrontend": "npm start --prefix baefrontend",
     "build":"cd baefrontend && npm run build",
     "install-client":"cd baefrontend && npm install",
-    "heroku-postbuild" : "npm run install-client && npm run client",
+    "heroku-postbuild" : "npm run install-client && npm run build",
     "dev": "concurrently \"npm run server\" \"npm run baefrontend\"",
     "test": "jest"
   },
