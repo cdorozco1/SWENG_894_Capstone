@@ -4,7 +4,7 @@
   "description": "Backend for Budgeting and Expense App",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
+    "start": "node server.js",
     "server": "nodemon server",
     "baefrontend": "npm start --prefix baefrontend",
     "build":"cd baefrontend && npm run build",
