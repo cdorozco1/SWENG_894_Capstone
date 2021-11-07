@@ -4,7 +4,7 @@
 
 // Imports
 import React from 'react';
-import {removeUserSession} from './utilities/Session';
+// import {removeUserSession} from './utilities/Session';
 
 // BAE GUI components
 import {Header} from './Header';

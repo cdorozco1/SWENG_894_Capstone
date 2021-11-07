@@ -32,7 +32,7 @@ function App() {
       return;
     }
     
-    axios.get(`http://localhost:5000/verifyToken?token=${token}`).then(response => {
+    axios.get(`http://localhost:8080/verifyToken?token=${token}`).then(response => {
       setUserSession(response.data.token, response.data.user);
       setAuthLoading(false);
     }).catch(error => {
@@ -51,14 +51,14 @@ function App() {
         <div>
           <div className = "header">
             <NavLink exact activeClassName = "active" to="/">Home</NavLink>
-            <NavLink activeClassName ="active" to="/login">Login</NavLink>
+            {/* <NavLink activeClassName ="active" to="/login">Login</NavLink> */}
             <NavLink activeClassName ="active" to="/dashboard">Dashboard</NavLink>
           </div>
           <div className ="content">
             <Switch>
               <Route exact path ="/" component = {Home} />
-              <PublicRoute path ="/login" component = {Login} />
-              <PrivateRoute path ="/dashboard" component = {Dashboard} />
+              {/* <Route path ="/login" component = {Login} /> */}
+              <Route path ="/dashboard" component = {Dashboard} />
             </Switch>
           </div>
         </div>      
