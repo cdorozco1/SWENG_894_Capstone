@@ -5,11 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server",
+    "server": "nodemon server.js",
     "baefrontend": "npm start --prefix baefrontend",
     "build":"cd baefrontend && npm run build",
-    "install-client":"cd baefrontend && npm install",
-    "heroku-postbuild" : "npm run install-client && npm run build",
+    "install-baefrontend":"cd baefrontend && npm install",
+    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix baefrontend && npm run build --prefix baefrontend",
     "dev": "concurrently \"npm run server\" \"npm run baefrontend\"",
     "test": "jest"
   },
