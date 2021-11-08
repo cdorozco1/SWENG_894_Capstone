@@ -12,13 +12,14 @@ import {axios} from 'axios';
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Login from './components/Login';
+import Charts from './components/Charts';
 
 // Public/private route imports
-import PrivateRoute from './components/utilities/PrivateRoute';
-import PublicRoute from './components/utilities/PublicRoute';
+// import PrivateRoute from './components/utilities/PrivateRoute';
+// import PublicRoute from './components/utilities/PublicRoute';
 
 // Session management imports
-import {getToken, removeUserSession, setUserSession} from './components/utilities/Session'
+// import {getToken, removeUserSession, setUserSession} from './components/utilities/Session'
 
 // Styling import
 import './styling/styles.css'
@@ -53,12 +54,14 @@ function App() {
             <NavLink exact activeClassName = "active" to="/">Home</NavLink>
             <NavLink activeClassName ="active" to="/login">Login</NavLink>
             <NavLink activeClassName ="active" to="/dashboard">Dashboard</NavLink>
+            <NavLink activeClassName ="active" to="/charts">Charts</NavLink>
           </div>
           <div className ="content">
             <Switch>
               <Route exact path ="/" component = {Home} />
               <Route path ="/login" component = {Login} />
               <Route path ="/dashboard" component = {Dashboard} />
+              <Route path ="/charts" component ={Charts}/>
             </Switch>
           </div>
         </div>      
