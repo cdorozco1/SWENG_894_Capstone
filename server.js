@@ -132,7 +132,7 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold));
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
+  app.use(express.static('baefrontend/build'));
 } else {
   app.use(morgan('dev'));
 }
