@@ -126,7 +126,7 @@ app.get('/verifyToken', function (req, res) {
 });
 
 // Configure port number and listen
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold));
 
