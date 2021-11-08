@@ -35,7 +35,7 @@ const data = {
 const ExpensesPieChart = () => (
   <>
     <div className='header'>
-      <h2 className='title'>Pie Chart</h2>
+      <h2 className='title'>Expense Category Chart</h2>
     </div>
     <Pie data={data} />
   </>
