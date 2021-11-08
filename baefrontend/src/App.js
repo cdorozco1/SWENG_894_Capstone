@@ -32,7 +32,7 @@ function App() {
       return;
     }
     
-    axios.get(`http://localhost:8080/verifyToken?token=${token}`).then(response => {
+    axios.get(`http://localhost:5000/verifyToken?token=${token}`).then(response => {
       setUserSession(response.data.token, response.data.user);
       setAuthLoading(false);
     }).catch(error => {
