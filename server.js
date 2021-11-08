@@ -8,10 +8,10 @@ const dotenv = require('dotenv');
 const colors = require('colors');
 const morgan = require('morgan');
 const connectDB = require('./config/database');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const jwt = require('jsonwebtoken');
-const users = require('./users/Users');
+// const cors = require('cors');
+// const bodyParser = require('body-parser');
+// const jwt = require('jsonwebtoken');
+// const users = require('./users/Users');
 
 // Dotenv path
 dotenv.config({path: './config/config.env'});
@@ -127,7 +127,7 @@ app.use('/api/v1/transactions', transactions);
 // });
 
 // Configure port number and listen
-const PORT = process.env.port || 8080;
+const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold));
 
