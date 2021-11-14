@@ -2,24 +2,14 @@
 // The following is the source code for the Budgeting and Expense App, or BAE
 // This file provides the source code for the Net Income component
 
-import React, {useContext} from 'react';
-import { GlobalContext } from '../context/GlobalState';
+import React from 'react';
+import TotalIncome from '../helperfns/TotalIncome';
+import TotalExpenses from '../helperfns/TotalExpenses';
 
 export const NetIncome = () => {
-  const {transactions} = useContext(GlobalContext);
-
-  const amounts = transactions.map(transaction =>transaction.amount);
-
-
-  const income = amounts
-  .filter (item => item>0)
-  .reduce ((acc,item) => (acc+=item),0)
-  .toFixed(2);
-
-  const expense = amounts
-  .filter(item =>item < 0)
-  .reduce ((acc,item) => (acc+=item),0)
-  .toFixed(2);
+  // Get the total income and total expense dollar amounts, display to net income component
+  const income = TotalIncome();
+  const expense = TotalExpenses();
   
     return (
         <div className="net-income-container">

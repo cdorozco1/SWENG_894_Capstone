@@ -6,9 +6,9 @@ import React from 'react';
 
 function Home() {
     return(
-    <div>
-        Welcome to the Budgeting and Expense Application Home Page
-    </div>
+    <h2>
+        Welcome to the Budgeting and Expense Application Home Page!
+    </h2>
     );
 };
 

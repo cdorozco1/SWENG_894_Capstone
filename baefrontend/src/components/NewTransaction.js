@@ -5,6 +5,8 @@
 // Imports
 import React, {useState, useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 
 export const NewTransaction = () => {
@@ -39,6 +41,65 @@ export const NewTransaction = () => {
         addTransaction(newTransaction);     
     }
 
+    // Define the dropdown for transaction type
+    const options = [
+        {
+          label: "Expense - Eating Out",
+          value: "Eating Out",
+        },
+        {
+          label: "Expense - Entertainment",
+          value: "Entertainment",
+        },
+        {
+          label: "Expense - Groceries",
+          value: "Groceries",
+        },
+        {
+          label: "Expense - Housing",
+          value: "Housing",
+        },
+        {
+          label: "Expense - Insurance",
+          value: "Insurance",
+        },
+        {
+          label: "Expense - Loans",
+          value: "Loans",
+        },
+        {
+          label: "Expense - Other",
+          value: "Other",
+        },
+        {
+          label: "Expense - Transportation",
+          value: "Transportation",
+        },
+        {
+          label: "Expense - Utilities",
+          value: "Utilities",
+        },
+        {
+          label: "Income - Bonuses",
+          value: "Bonuses",
+        },
+        {
+          label: "Income - Gifts",
+          value: "Gifts",
+        },
+        {
+          label: "Income - Investments",
+          value: "Investments",
+        },
+        {
+          label: "Income - Other",
+          value: "Other",
+        },
+        {
+          label: "Income - Paycheck",
+          value: "Paycheck"
+        }
+      ];
     return (
         <>
             <h3 data-testid = "header">
@@ -46,7 +107,7 @@ export const NewTransaction = () => {
             </h3>
             <form onSubmit={onSubmit}>
                 <div className="form-control">
-                    <label htmlFor="text">Transaction Title</label>
+                    <label htmlFor="text">Transaction Title<br />(Enter a title for the transaction)</label>
                     <input data-testid="text" type="text" value={text} onChange={(e)=>setText(e.target.value)} placeholder="Enter description..." />
                 </div>
                 <div className="form-control">
@@ -54,8 +115,11 @@ export const NewTransaction = () => {
                 <input data-testid = "amount" type="number" value={amount} onChange={(e)=>setAmount(e.target.value)} placeholder="Enter amount..." />
             </div>
             <div className="form-control">
-                    <label htmlFor="transtype">Transaction Type <br />(Enter category of the transaction)</label>
-                <input data-testid="transtype" type="text" value={transtype} onChange={(e)=>setTranstype(e.target.value)} placeholder="Enter type..." />
+                    <label htmlFor="transtype">Transaction Type <br />(Enter category of the transaction)<br/></label>
+                <select data-testid="transtype" type="text" value={transtype} onChange={(e)=>setTranstype(e.target.value)} placeholder="Enter type...">
+                    {options.map((option) => (
+                    <option value={option.value}>{option.label}</option>))}
+                </select>
             </div>
             <div className="form-control">
                     <label htmlFor="date">Transaction Date <br />(Enter date of the transaction)</label>

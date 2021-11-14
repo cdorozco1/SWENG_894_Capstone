@@ -2,6 +2,7 @@
 // The following is the source code for the Budgeting and Expense App, or BAE
 // This project is a work in progress
 
+// eslint-disable-next-line
 export default (state, action) => {
     switch(action.type){
         case 'GET_TRANSACTIONS':
@@ -27,5 +28,5 @@ export default (state, action) => {
             }    
         default:
             return state;
-    }
-}
+    };
+};

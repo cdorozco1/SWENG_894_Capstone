@@ -9,7 +9,6 @@ import { format } from 'date-fns';
 
 export const Transaction = ({transaction}) => {
     const {deleteTransaction} = useContext(GlobalContext);
-    const date = transaction.date;
     const dateForm= format(new Date(transaction.date), 'yyyy/MM/dd');
     
     const sign = transaction.amount < 0 ? '-' : '+';
