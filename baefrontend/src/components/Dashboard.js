@@ -14,7 +14,7 @@ import {TransactionList} from './TransactionList'
 import {NewTransaction} from './NewTransaction'
 import {GlobalProvider} from '../context/GlobalState'
 
-function Dashboard(props){
+function Dashboard(){
     return (
         <GlobalProvider>
         <Header />

@@ -4,14 +4,14 @@
 // This project is a work in progress
 
 // React and axios imports
-import React, {useState, useEffect} from 'react';
+import React/*, {useState, useEffect}*/ from 'react';
 import {BrowserRouter, Switch, Route, NavLink} from 'react-router-dom';
-import {axios} from 'axios';
+//import {axios} from 'axios';
 
 // BAE component imports
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
-import Login from './components/Login';
+// import Login from './components/Login';
 import Charts from './components/Charts';
 
 // Public/private route imports
@@ -52,14 +52,14 @@ function App() {
         <div>
           <div className = "header">
             <NavLink exact activeClassName = "active" to="/">Home</NavLink>
-            <NavLink activeClassName ="active" to="/login">Login</NavLink>
+            {/* <NavLink activeClassName ="active" to="/login">Login</NavLink> */}
             <NavLink activeClassName ="active" to="/dashboard">Dashboard</NavLink>
             <NavLink activeClassName ="active" to="/charts">Charts</NavLink>
           </div>
           <div className ="content">
             <Switch>
               <Route exact path ="/" component = {Home} />
-              <Route path ="/login" component = {Login} />
+              {/* <Route path ="/login" component = {Login} /> */}
               <Route path ="/dashboard" component = {Dashboard} />
               <Route path ="/charts" component ={Charts}/>
             </Switch>
