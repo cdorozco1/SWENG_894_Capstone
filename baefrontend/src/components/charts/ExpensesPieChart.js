@@ -1,6 +1,6 @@
 // Prepared by: David Orozco
 // The following is the source code for the Budgeting and Expense App, or BAE
-// This file provides the source code for the Income vs Expense Pie Chart components
+// This file provides the source code for the Expense pie chart component
 
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
@@ -34,14 +34,14 @@ const ExpensesPieChart = () => {
     // Render the pie chart with above categories
     <>
       <div className='header'>
-        <h2 className='title'>Expenses Pie Chart</h2>
+        <h5 className='title'>Expenses Pie Chart</h5>
       </div>
       <Pie 
       data={{
         labels: ['Eating Out', 'Entertainment', 'Groceries', 'Housing', 'Insurance', 'Loans', 'Other', 'Transportation', 'Utilities'],
         datasets: [
           {
-            label: '# of Votes',
+            label: 'Expense Categories',
             data: [eatingOut, entertainment, groceries, housing, insurance, loans, other, transportation, utilities],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',

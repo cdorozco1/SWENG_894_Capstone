@@ -6,8 +6,8 @@ import React from 'react';
 
 export const Header = () => {
     return (
-        <h2 data-testid = "header">
-          Budgeting And Expense Application - Dashboard
-        </h2>
+      <>
+        <h2 data-testid = "header">Budgeting And Expense Application - Dashboard</h2>
+      </>
     )
 }

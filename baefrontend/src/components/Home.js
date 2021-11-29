@@ -4,12 +4,13 @@
 
 import React from 'react';
 
-function Home() {
+export const Home = () => {
     return(
-    <h2>
-        Welcome to the Budgeting and Expense Application Home Page!
-    </h2>
-    );
-};
-
-export default Home;
+    <>
+        <h2 data-testid = "home">Welcome to the Budgeting and Expense, or BAE, Application Home Page!</h2>
+        <h5 data-testid = "appuse"><br/>This application is used for tracking financial transactions - income and expenses</h5>
+        <h5 data-testid = "dashinfo"><br/>Navigate to the Dashboard page to view and add transactions</h5>
+        <h5 data-testid = "chartinfo"><br/>Navigate to the Charts page to view transaction analytics</h5>
+    </>
+    )
+}

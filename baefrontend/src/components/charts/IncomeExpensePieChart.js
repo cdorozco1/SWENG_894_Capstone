@@ -20,7 +20,7 @@ const IncomeExpensePieChart = () => {
   return(
   <>
     <div className='header'>
-      <h2 className='title'>Income vs Expense Pie Chart</h2>
+      <h5 className='title'>Income vs Expense Pie Chart</h5>
     </div>
     <Pie 
     data={{
@@ -37,7 +37,7 @@ const IncomeExpensePieChart = () => {
             'rgba(255, 99, 132, 1)',
             'rgba(75, 192, 192, 1)',
           ],
-          borderWidth: .5,
+          borderWidth: 1,
         },
       ],
     }} />

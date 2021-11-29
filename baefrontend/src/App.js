@@ -9,57 +9,26 @@ import {BrowserRouter, Switch, Route, NavLink} from 'react-router-dom';
 //import {axios} from 'axios';
 
 // BAE component imports
-import Home from './components/Home';
+import {Home} from './components/Home';
 import Dashboard from './components/Dashboard';
-// import Login from './components/Login';
 import Charts from './components/Charts';
-
-// Public/private route imports
-// import PrivateRoute from './components/utilities/PrivateRoute';
-// import PublicRoute from './components/utilities/PublicRoute';
-
-// Session management imports
-// import {getToken, removeUserSession, setUserSession} from './components/utilities/Session'
 
 // Styling import
 import './styling/styles.css'
 
 function App() {
-  // const [authLoading, setAuthLoading] = useState(true);
-  // // Get the token
-  // useEffect (() =>{
-  //   const token = getToken();
-  //   if(!token) {
-  //     return;
-  //   }
-    
-  //   axios.get(`http://localhost:8080/verifyToken?token=${token}`).then(response => {
-  //     setUserSession(response.data.token, response.data.user);
-  //     setAuthLoading(false);
-  //   }).catch(error => {
-  //     removeUserSession();
-  //     setAuthLoading(false);
-  //   });
-  // }, []);
-
-  // if (authLoading && getToken()) {
-  //   return <div className = "content">Verifying Authentication...</div>
-  // }
-
   return (
     <div>
       <BrowserRouter>
         <div>
           <div className = "header">
             <NavLink exact activeClassName = "active" to="/">Home</NavLink>
-            {/* <NavLink activeClassName ="active" to="/login">Login</NavLink> */}
             <NavLink activeClassName ="active" to="/dashboard">Dashboard</NavLink>
             <NavLink activeClassName ="active" to="/charts">Charts</NavLink>
           </div>
           <div className ="content">
             <Switch>
               <Route exact path ="/" component = {Home} />
-              {/* <Route path ="/login" component = {Login} /> */}
               <Route path ="/dashboard" component = {Dashboard} />
               <Route path ="/charts" component ={Charts}/>
             </Switch>

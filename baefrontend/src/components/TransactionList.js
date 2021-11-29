@@ -15,12 +15,29 @@ export const TransactionList = () => {
         //eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    return (
-        <>
-            <h3 data-testid="header">Transaction List</h3>
-            <ul className="list">
-                {transactions.map(transaction =>(<Transaction key= {transaction.id}  transaction = {transaction}/>))}
-            </ul>
-        </>
-    )
+return(
+    // Create a table for the transaction list
+    <div className="tableStyle">
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Income/Expense</th>
+          <th>Category</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {transactions.map((transaction) => (
+          <Transaction
+            key={transaction.id}
+            transaction={transaction}
+          />
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
 }

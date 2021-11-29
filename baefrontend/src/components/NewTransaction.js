@@ -7,10 +7,7 @@ import React, {useState, useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import 'bootstrap/dist/css/bootstrap.css';
 
-
-
 export const NewTransaction = () => {
-
     // Define functions for transaction details
     const [text, setText] = useState('');
     const [amount, setAmount] = useState(0);
@@ -43,6 +40,10 @@ export const NewTransaction = () => {
 
     // Define the dropdown for transaction type
     const options = [
+        {
+          label: "",
+          value: "",
+        },
         {
           label: "Expense - Eating Out",
           value: "Eating Out",
@@ -112,20 +113,19 @@ export const NewTransaction = () => {
                 </div>
                 <div className="form-control">
                     <label htmlFor="amount">Amount <br />(Negative for expense, positive for income)</label>
-                <input data-testid = "amount" type="number" value={amount} onChange={(e)=>setAmount(e.target.value)} placeholder="Enter amount..." />
-            </div>
-            <div className="form-control">
-                    <label htmlFor="transtype">Transaction Type <br />(Enter category of the transaction)<br/></label>
-                <select data-testid="transtype" type="text" value={transtype} onChange={(e)=>setTranstype(e.target.value)} placeholder="Enter type...">
-                    {options.map((option) => (
-                    <option value={option.value}>{option.label}</option>))}
-                </select>
-            </div>
-            <div className="form-control">
+                    <input data-testid = "amount" type="number" value={amount} onChange={(e)=>setAmount(e.target.value)} placeholder="Enter amount..." />
+                </div>
+                <div className="form-control">
+                    <label htmlFor="transtype">Transaction Type <br />(Enter category of the transaction)</label>
+                    <br /><select data-testid="transtype" type="text" value={transtype} onChange={(e)=>setTranstype(e.target.value)} placeholder="Enter type...">
+                    {options.map((option) => (<option value={option.value}>{option.label}</option>))}
+                    </select>
+                </div>
+                <div className="form-control">
                     <label htmlFor="date">Transaction Date <br />(Enter date of the transaction)</label>
-                <input data-testid = "date" type="date" value={date} onChange={(e)=>setDate(e.target.value)} placeholder="Enter date..." />
-            </div>
-            <button data-testid="addTransBtn" className="btn">Add Transaction</button>
+                    <input data-testid = "date" type="date" value={date} onChange={(e)=>setDate(e.target.value)} placeholder="Enter date..." />
+                </div>
+                <button data-testid="addTransBtn" className="btn">Add Transaction</button>
             </form>
         </>
     );

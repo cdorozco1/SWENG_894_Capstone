@@ -12,15 +12,17 @@ export const Transaction = ({transaction}) => {
     const dateForm= format(new Date(transaction.date), 'yyyy/MM/dd');
     
     const sign = transaction.amount < 0 ? '-' : '+';
-
+        
     return (
-        <li className={transaction.amount < 0 ? 'minus':'plus'}>
-            {transaction.text} 
-            <span>{transaction.income}</span>
-            <span>{transaction.transtype}</span>
-            <span>{dateForm}</span>
-            <span>{sign}${Math.abs(transaction.amount)}</span>
+        <tr style={{ color: sign === '+' ? "#2ecc71" : "#c0392b" }}>
+            <td>{transaction.text}</td> 
+            <td>{transaction.income}</td>
+            <td>{transaction.transtype}</td>
+            <td>{dateForm}</td>
+            <td>{sign}${Math.abs(transaction.amount)}</td>
+            <td>
             <button onClick ={() => deleteTransaction(transaction._id)} className="delete-btn">x</button>
-        </li> 
+            </td>
+        </tr> 
     )
 }

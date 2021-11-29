@@ -65,21 +65,21 @@ test("User can enter data for amount (positive values), UT-005", () =>{
     expect(amountEl.value).toBe("500.5");
 })
 
-test("User can enter data for transaction type, UT-006", () =>{
-    //Render the new transaction component and get the text
-    const component =render(<NewTransaction/>);
-    const transtypeEl = component.getByTestId("transtype");
+// test("User can enter data for transaction type, UT-006", () =>{
+//     //Render the new transaction component and get the text
+//     const component =render(<NewTransaction/>);
+//     const transtypeEl = component.getByTestId("transtype");
 
-    //Fire an event for adding transaction type of income to add transaction
-    fireEvent.change(transtypeEl, {
-        target:{
-            value: "Income"
-        }
-    });
+//     //Fire an event for adding transaction type of income to add transaction
+//     fireEvent.change(transtypeEl, {
+//         target:{
+//             value: "Income"
+//         }
+//     });
 
-    //Assert type is income
-    expect(transtypeEl.value).toBe("Income");
-})
+//     //Assert type is income
+//     expect(transtypeEl.value).toBe("Income");
+// })
 
 test("User can enter data for date, UT-007", () =>{
     //Render the new Transaction and get the text

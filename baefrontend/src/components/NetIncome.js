@@ -19,7 +19,7 @@ export const NetIncome = () => {
           </div>
           <div>
             <h4>Expense</h4>
-    <p  className="money out">${expense}</p>
+    <p className="money out">${expense}</p>
           </div>
         </div>
     );
