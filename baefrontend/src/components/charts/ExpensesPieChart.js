@@ -20,15 +20,15 @@ const ExpensesPieChart = () => {
   const utilities = TotalExpCategory("Utilities");
 
   // Console logging for debug
-  console.log("Eating out amount, $",eatingOut);
-  console.log("Entertainment amount, $",entertainment);
-  console.log("Groceries amount, $",groceries);
-  console.log("Housing amount, $",housing);
-  console.log("Insurance amount, $",insurance);
-  console.log("Loan amount, $",loans);
-  console.log("Other amount, $",other);
-  console.log("Transportation amount, $",transportation);
-  console.log("Utilities amount, $",utilities);
+  // console.log("Eating out amount, $",eatingOut);
+  // console.log("Entertainment amount, $",entertainment);
+  // console.log("Groceries amount, $",groceries);
+  // console.log("Housing amount, $",housing);
+  // console.log("Insurance amount, $",insurance);
+  // console.log("Loan amount, $",loans);
+  // console.log("Other amount, $",other);
+  // console.log("Transportation amount, $",transportation);
+  // console.log("Utilities amount, $",utilities);
 
   return(
     // Render the pie chart with above categories

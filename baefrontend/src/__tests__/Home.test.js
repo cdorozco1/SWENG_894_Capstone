@@ -4,11 +4,11 @@
 // The following is a very simple unit test to verify the header of BAE is rendered
 
 import React from 'react'
-import { Home } from '../components/Header'
+import { Home } from '../components/Home'
 import {render} from '@testing-library/react'
 import "@testing-library/jest-dom/extend-expect"
 
-test("Home renders with correct info", () =>{
+test("Home renders successfully, UT16", () =>{
     //Render the header
     const component =render(<Home/>);
     const headerElement = component.getByTestId("home");

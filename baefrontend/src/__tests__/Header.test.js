@@ -8,7 +8,7 @@ import { Header } from '../components/Header'
 import {render} from '@testing-library/react'
 import "@testing-library/jest-dom/extend-expect"
 
-test("Header renders with correct test", () =>{
+test("Header renders successfully", () =>{
     //Render the header
     const component =render(<Header/>);
     const headerElement = component.getByTestId("header");
