@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 export const NewTransaction = () => {
     // Define functions for transaction details
     const [text, setText] = useState('');
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState(0.0);
     const [transtype, setTranstype] = useState('');
     const [date, setDate] = useState('');
 
@@ -32,7 +32,7 @@ export const NewTransaction = () => {
         // Date of transaction
         date,
         // Amount of transaction
-        amount: parseInt(amount)
+        amount: +amount
         }
 
         addTransaction(newTransaction);     

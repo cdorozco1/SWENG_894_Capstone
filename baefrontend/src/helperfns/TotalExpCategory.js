@@ -1,6 +1,6 @@
 // Prepared by: David Orozco
 // The following is the source code for the Budgeting and Expense App, or BAE
-// This file provides the source code for calculating total expense for eating out
+// This file provides the source code for calculating total expense for a given category
 
 import {useContext, useEffect} from 'react';
 import { GlobalContext } from '../context/GlobalState';
